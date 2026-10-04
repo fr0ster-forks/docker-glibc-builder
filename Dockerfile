@@ -1,4 +1,6 @@
-FROM ubuntu:22.04
+ARG BASE_IMAGE=ubuntu
+ARG BASE_IMAGE_VERSION=22.04
+FROM ${BASE_IMAGE}:${BASE_IMAGE_VERSION}
 LABEL maintainer="Sasha Gerrand <github+docker-glibc-builder@sgerrand.com>"
 ENV DEBIAN_FRONTEND=noninteractive \
     GLIBC_VERSION=2.39 \
